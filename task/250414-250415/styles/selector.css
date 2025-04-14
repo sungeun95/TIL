@@ -1,16 +1,16 @@
-#weather {background-color:aqua;}
-#weather h1 {color:gold;}
-#weather p {background-color: blue;color:white;}
-#weather .area {background-color: gold;color:red;}
-#weather .temperature {background-color: violet;color:purple;}
-#weather .sub_title {background-color: green;color:greenyellow;}
-#weather .humidity {background-color: yellow;color:chocolate;}
-#weather .dust {color: black;}
-#weather .result {background-color: pink;color:fuchsia;}
-#news {background-color:aqua;}
+#weather {background-color:#d7ffed;}
+#weather h1 {background-color:#f9ffd7; color:orange;}
+#weather .area {background-color:rgba(0,0,0,0.5);color:white;}
+#weather .temperature {background-color: yellow;color:green;}
+#weather p {color:green;}
+#weather .sub_title {background-color:palevioletred;color:white;}
+#weather .humidity {background-color: yellow;color:green;}
+#weather .dust {background-color: yellow; color:green;}
+#weather .result {background-color: rgba(0,0,0,0.5);color:white;}
+#news {background-color:#ffd7ff;}
 #news>a {background-color:red; color:white;}
-#news .box {background-color: yellow;}
-#news .box a {background-color: greenyellow;}
-#news .box a h2 {color:orange;}
-#news .box a p {color:black;}
-#news>p {color:greenyellow;}
+#news .box {background-color: pink;}
+#news .box a {}
+#news .box a h2 {background-color:rgba(255,255,255,0.5); color:purple;}
+#news .box a p {background-color:rgba(255,255,255,0.2); color:white;}
+#news>p {color:palevioletred;}
