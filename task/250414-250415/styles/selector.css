@@ -1,0 +1,15 @@
+#weather {}
+#weather h1 {}
+#weather p {}
+#weather .area {}
+#weather .temperature {}
+#weather .sub_title {}
+#weather .dust {}
+#weather .result {}
+#news {}
+#news>a {}
+#news .box {}
+#news .box a {}
+#news .box a h2 {}
+#news .box a p {}
+#news>p {}
