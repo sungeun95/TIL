@@ -107,6 +107,29 @@
 * `dd`는 내용, 왠지 많이 쓰면 안된다는 생각에 다른 태그들을 연달아 사용했는데, 생각해보니 횟수제한 없이 내용기제가 가능하다는걸 알았다. 다음부터는 맘대로 써야지
 * ul-li 관계에서 li-ul-li관계로 자식을 줄 수 있다.
 ----
-### 2025/04/11 - HTML 8일차 레이아웃
-----
-# 2025/04/11 - 개인의견
+### 2025/04/15 - HTML 10일차 레이아웃
+## CSS Style Shrrt
+* 외부스타일시트 파일 저장 **styles** 폴더에 `파일명.css` 저장한다.
+* 위 파일 생성 후 CSS연결을 원하는 HTML파일 head위치에 `<link>`태그로 연결한다.
+* HTML작성 후 HTML의 모든 디자인 형태를 초기화하는 `reset.css` 반드시 연결!
+* 웹글꼴(Noto Sans KR,Pretendard 등) 연결 시 HTML파일에 `<link>` 태그 연결!
+### head태그 내 들어가는 link태그 작성 순서
+1. 웹글꼴 포함 기타 플러그인 연결 주소
+2. reset.css
+3. 해당 HTML별 디자인.css
+### 디자인 CSS 작성 시 작성 순서 및 주의사항
+* **부모→자식**순서로 가장 바깥쪽 부모부터 먼저 선택자를 만들고 디자인한다.
+* 레이아웃 관련 요소에 `width, height` 속성 작성 시 영역 확인을 위한 `background-color`를 꼭 함께 작성해서 정확히 구분한다. 이 때 색상은 쉬운 영역 구분을 위한 `aqua,lime, yellow, pink`등 밝은 색상 위주로 사용한다. 영역 확인과 디자인 작업을 모두 마친 후 위 색상은 제거로 마무리해야한다.
+* 실제 디자인에 들어가는 색상은 **rgba 또는 핵사코드**로 입력하고 테스트용으로 입력하는 임시 색상은 영문명으로 입력해야 한다.
+### 자주 이용하는 CSS 속성 값과 기본값
+* `letter-spacing` 자간 | 0 | `letter-spacing:-0.02ram;`
+* `line-height` 행간 | 1,100% | `line-height:1.5;`
+* `font-size` 글자크기 | 1em(16px) | `font-size:1.2rem;`
+* `color` 글자색상 | `color:#f00`, `color:rgba(0,0,0,0.5)`
+* `background-color` 배경색상 | `background-color:#000;`
+* `width` 가로크기 | `width:120px;`
+* `height` 세로크기 | `height:120px;`
+* `margin` 바깥쪽여백 | `margin-top:30px;`
+* `border-radius` 모서리둥글기 | `border-radius:10px;`
+* `fout-weight` 글자굵기 | 400 | `fout-weight:400;`
+* `fout-family` 글꼴체 : `fout-family: '대표글꼴','보조글꼴',sans-serif`
