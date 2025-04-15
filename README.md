@@ -132,4 +132,4 @@
 * `margin` 바깥쪽여백 | `margin-top:30px;`
 * `border-radius` 모서리둥글기 | `border-radius:10px;`
 * `fout-weight` 글자굵기 | 400 | `fout-weight:400;`
-* `fout-family` 글꼴체 : `fout-family: '대표글꼴','보조글꼴',sans-serif`
+* `fout-family` 글꼴체 : `fout-family: '대표글꼴','보조글꼴',sans-serif;`
