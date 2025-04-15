@@ -14,3 +14,4 @@
 #news .box a h2 {background-color:rgba(255,255,255,0.5); color:purple;}
 #news .box a p {background-color:rgba(255,255,255,0.2); color:white;}
 #news>p {color:purple;}
+#news p span {color:black;}
