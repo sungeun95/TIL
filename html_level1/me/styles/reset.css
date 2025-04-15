@@ -1,0 +1,8 @@
+/* reset.css 릿셋 파일 */
+html,body,h1,h2,h3,h4,h5,h6,p,a,div,blockquote,address,video,ul,ol,li,dl,dt,dd,hr,span,em,strong,s,del,sup,sub,img,q,code {
+    font-size:1em; font-weight:400;
+    line-height:1; letter-spacing:0;
+    color:#000; 
+    margin:0; padding:0;
+    text-decoration: none;
+}
