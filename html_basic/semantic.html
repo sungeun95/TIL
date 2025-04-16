@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML5 시멘틱태그란 레이아웃태그를 더욱 의미있게 사용하기 위한 공통 단어들을 태그 형태로 만들어둔 태그 모음을 뜻한다. div와 적절히 의미 있게 조합하여 활용할 수 있어야한다.">
+    <meta name="keywords" content="시멘틱태그, 의미론적인, 레이아웃">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱태그 기초공부</title>
+    <style>
+        /* 내부스타일시트  */
+        #wrep {}
+        #wrep header {}
+        #wrep header nav {}
+        #wrep main {}
+        #wrep main #left_wrep {}
+        #wrep main #left_wrep .ad {}
+        #wrep main #left_wrep .news {}
+        #wrep main #left_wrep .shopping {}
+        #wrep main aside {}
+        #wrep main aside .login {}
+        #wrep main aside .ad1 {}
+        #wrep main aside .ad2 {}
+        #wrep main aside .shoppihg {}
+        #wrep main aside .weather {}
+        #wrep footer {}
+    </style>
+</head>
+<body><!-- 네이버 기준 시멘틱 정리 -->
+    <div id="wrep"><!-- 전체묶음 -->
+        <header><!-- 로고, 메뉴 등을 묶는 상단 레이아웃(semantic시멘틱) -->
+            <nav><!-- gnb 주요내비게이션을 묶어주는 레이아웃(semantic시멘틱) --></nav>
+        </header>
+        <main><!-- header와 footer사이 주 내용 전체 레이아웃(semantic시멘틱) -->
+            <div id="left_wrap"><!-- 왼쪽 전체 그룹 -->
+                <section class="ad"></section> <!-- 하나의 독립적인 객체 레이아웃(semantic시멘틱) -->
+                <section class="news"></section>
+                <section class="shopping"></section>
+            </div>
+            <aside><!-- 오른쪽 전체 사이드 그룹(semantic시멘틱) -->
+                <section class="login"></section>
+                <section class="ad1"></section>
+                <section class="ad2"></section>
+                <section class="shopping"></section>
+                <section class="weather"></section>
+            </aside>
+        </main>
+        <footer><!-- 회사소개, 고객센터, 연착처 등 묶는 하단 레이아웃(semantic시멘틱) -->
+
+        </footer>
+    </div>
+</body>
+</html>
