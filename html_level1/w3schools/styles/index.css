@@ -1,0 +1,58 @@
+/* index.css */
+#wrap {
+    background-color: #fff;
+    width: 440px; height: 956px;
+    text-align: center;
+}
+#wrap .box1 {
+    background-color: #48CFCB;
+    height: 60px;} 
+#wrap h1 {
+    margin-top: 242px;
+    margin-bottom: 97px;
+}
+#wrap h1 img {}
+#wrap .btn_wrap{
+    width: 300px;
+    /* 블록의 너비값을 부모보다 작게 설정했을때 블록을 가운데 정렬하고 싶다면? */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;/* btn_wrap의 인라인 자식, 자손 왼쪽 정렬 */
+}
+#wrap .btn_wrap a {
+    display: block;/* 블록의 너비는 부모의 100%와 같다 */
+    text-align: center;/* 글자보다 넓은 너비를 가진 a의 자식 글자를 가운데 정렬 */
+}
+#wrap .btn_wrap .login_btn {
+    background-color: #48CFCB;
+    color:#fff;
+    font-size: 0.875rem;
+    letter-spacing:-0.02em;
+    border-radius:5px;
+    line-height:40px;
+    height:40px;
+}
+#wrap .btn_wrap .sign_up_btn {
+    background-color:#9FB3DF;
+    color:#fff;
+    font-size: 0.875rem;
+    letter-spacing:-0.02em;
+    border-radius:5px;
+    margin-top: 10px;
+    margin-bottom: 19px;
+    line-height:40px;
+    height:40px;
+}
+#wrap .btn_wrap .pw_seatch {
+    display: inline;
+    color:#9FB3DF;
+    font-size: 0.75rem;
+    letter-spacing:-0.02em;
+    text-align: left;
+}
+
+#wrap .box2 {
+    height: 60px;
+    background-color: #48CFCB;
+    margin-top: 261px;
+}
