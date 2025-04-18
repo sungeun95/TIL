@@ -9,22 +9,18 @@
     height: 60px;
 }
 #wrap h1 {
-    font-weight: 700;
-    font-size: 2.5rem;
+    font-weight: 700; /* bold */
+    font-size: 2.5rem; /* 40px */
     color: #48CFCB;
     padding-top: 110px;
     margin-bottom: 30px;
-    letter-spacing: -0.02em;
     padding-left: 15px;
     padding-right: 15px;
 }
-#wrap>p {} /*wrap의 모든 자식 p  */
+#wrap>p {color:#48CFCB;} /*wrap의 모든 자식 p  */
 #wrap>h1+p {
-    color:#48CFCB;
     font-weight: 400;
-    font-size: 1rem;
     margin-bottom: 100px;
-    letter-spacing: -0.02em;
     padding-left: 15px;
     padding-right: 15px;
 } /*wrap의 h1 의 아래형제의 p  */
@@ -40,30 +36,39 @@
 #wrap #login_frm .email_password_wrap h2 {
     font-weight: 600;
     font-size: 1.375em;
+    color:#48CFCB;
     margin-top: 20px;
     margin-bottom: 20px;
-    letter-spacing: -0.02em;
-    color:#48CFCB;
 }
-#wrap #login_frm .email_password_wrap p {
+#wrap #login_frm .email_password_wrap p {}
+#wrap #login_frm .email_password_wrap p input::placeholder {
+    /* placeholder 속성선택자작성법 */
+    font-size: 0.875rem;
+    color:#9FB3DF;
 }
 #wrap #login_frm .email_password_wrap p input {
     width:100%; height: 44px;
-    border-radius:5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    color: #9FB3DF;
     border:1px solid #48CFCB;
 }
+
 #wrap #login_frm .Forgot_password_wrap {}
 #wrap #login_frm .Forgot_password_wrap h2 {
     font-weight: 600;
     font-size: 1.375em;
-    letter-spacing: -0.02em;
     color:#48CFCB;
     margin-bottom: 20px;
 }
 #wrap #login_frm .Forgot_password_wrap p {
     text-align: center;
 }
-#wrap #login_frm .Forgot_password_wrap #login_btn{
+#wrap #login_frm .Forgot_password_wrap #login_btn {
     width: 100%; height: 44px;
     background-color: #48CFCB;
     border-radius: 5px;
@@ -71,27 +76,29 @@
     font-weight: 600;
     color: #fff;
     font-size: 0.875rem;
-    letter-spacing: -0.02em;
 }
-#wrap #login_frm .Forgot_password_wrap #Login_Google{
+#wrap #login_frm .Forgot_password_wrap .Login_Google {
     width: 100%; height: 44px;
     background-color: #9FB3DF;
     border-radius: 5px;
     font-weight: 600;
     color: #fff;
     font-size: 0.875rem;
-    letter-spacing: -0.02em;
-
+    display: block;
+    line-height: 44px;
 }
 #wrap #login_frm+p {
     margin-top: 30px;
     font-size: 0.75rem;
-    color: #48CFCB;
     padding-left: 15px;
     padding-right: 15px;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 300;
 } /* wrap의  #login_wrap 아래형제의 P*/
 #wrap #login_frm+p a {
     color: #9FB3DF;
+    font-weight: 600;
 }
 #wrap .box2{
     height: 60px;
