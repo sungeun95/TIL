@@ -7,7 +7,7 @@ em,strong,sub,sup,br,span,del,code,s,q,mark,img,a,
 table,thead,tbody,tfoot,tr,td,th{
     margin: 0; padding: 0; box-sizing: border-box;/* 객체에서 기본값에 패딩 값을 제외하고 계산하겠다. */
     line-height: 1;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     word-spacing: 0;
     font-size: 1em;
     font-weight: 400;

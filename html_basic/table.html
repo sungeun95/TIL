@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블태그</title>
+    <link href="./styles/reset.css" rel="stylesheet">
+    <style>
+        /* 수열선택자 (의미가 없는 요소에 이름을 붙이지 않고 관계와 순서로 대상을 파악해서 선택자를 만드는 방법) */
+        #t1 tr td:nth-child(2) {background-color: #ff0066;}
+        /* t1 부모의 자식 tr의 자식 rd의 2번째 자식을 선택한다. */
+        #t1,
+        #t1 tr,
+        #t1 tr th,
+        #t1 tr td {border: 2px solid #000;}
+        #t2,
+        #t2 tr,
+        #t2 tr th,
+        #t2 tr td {border: 2px dotted #444;}
+        /* 도서재고 표 디자인 */
+        #t3 {
+            border-radius:20px;
+            overflow:hidden;
+        }
+        #t3 thead {
+            background-color:#ff0066;
+        }
+        #t3 thead tr {}
+        #t3 thead tr th {
+            color: #fff;
+        }
+        #t3 tbody {
+            background-color: #eee;
+        }
+        #t3 tbody tr {}
+        #t3 tbody tr td{}
+    </style>
+</head>
+<body>
+    <!-- 수평 열 합치기 속성 (colspan, rowspan) -->
+    <!-- td또는 th열에만 주는 속성으로 적용 순서는 아래와 같다 -->
+    <!--
+    1. 합치고 싶은 가로방량 열 2개 이상 정하기 (갯수 제한 없음)
+    2. 위에서 정한 태그 확인하기
+    3. 위 태그 중 먼저 시작한 태그 속성으로 colspan="합치는 칸의 갯수"
+    4. 합쳐지는 첫번째를 제외한 나머지 태그는 주석으로 가리기 
+    -->
+    <table id="t1">
+        <tr>
+            <th colspan="2">1행1열</th>
+            <!-- <td>1행2열</td> -->
+        </tr>
+        <tr><!-- 모든 행에 들어가는 열의 갯수는 동일하게 작성한다. -->
+            <td>2행1열</td>
+            <td>2행2열</td>
+        </tr>
+    </table>
+    <hr>
+    <table id="t2">
+        <tr>
+            <th colspan="3">1</th>
+            <!-- <td>2</td> -->
+            <!-- <td>3</td> -->
+        </tr>
+        <tr>
+            <th rowspan="2">4</th>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <!-- <th>7</th> -->
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <hr>
+    <table id="t3">
+        <thead> <!-- 제목행 부분(제목만 존재해야한다.) -->
+            <tr><!-- 1행 -->
+                <th>제목</th> <!-- th제목열 -->
+                <th>종류</th>
+                <th>가격</th>
+                <th>수량</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>사망플래그</td><!-- 열의 갯수는 동일해야한다. -->
+                <td>도서</td>
+                <td>50.000</td>
+                <td>300</td>
+                <td>재고없음</td>
+            </tr>
+            <tr>
+                <td>설마 죽기야 하겠어</td>
+                <td>도서</td>
+                <td>40.000</td>
+                <td>212</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="t4">
+        <thead>
+            <tr>
+                <th>제목1</th>
+                <th>제목2</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>제목</th>
+                <td>결과</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+            </tr>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
