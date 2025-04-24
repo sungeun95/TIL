@@ -1,0 +1,89 @@
+main {
+    background-color: #111;
+    height: 100vh;/* 보이는 화면 크기 만큼 */
+    width: 460px;
+    margin: 0 auto;
+}
+main h1 {
+    text-align: center;
+    padding:100px 0 0; /* 부모 main과의 거리 */
+    margin:0 0 50px; /* 형제 section과의 거리 */
+}
+main h1 a {}
+main h1 a img {width: 200px;}
+main section {}
+/* =========================탭제목 */
+main section .tab_title {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+main section .tab_title a {
+    text-align: center;
+    width: 50%; float: left;
+    text-transform: uppercase;
+}
+main section .tab_title a span {
+    display: inline-block;
+    color: #fff;
+    padding: 7px 0;
+    font-weight: 200;
+}/* 비활성화 a의 자식 span. */
+main section .tab_title .active span {
+    border-bottom: 2px solid #48f78b;
+} /* 활성화된 a의 자식 span. */
+main section .tab_title .sign_in {}
+main section .tab_title .sign_up {}
+/* =========================탭내용 */
+main section .tab_container {
+    padding: 0 15px;/* 앱의 주요 콘텐츠가 폰 좌우 끝에 붙지 않도록 최소 여백 설정 */
+}
+/* =========================sign_in 을 클릭시 열리는 내용 */
+main section .tab_container #login_frm {}
+main section .tab_container #login_frm .id_pw {}
+main section .tab_container #login_frm .id_pw input[name^=user] {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 0.75rem;
+    border-radius: 25px;
+    background-color: #fff;
+    margin-bottom: 8px;
+}
+main section .tab_container #login_frm .id_pw input[name^=user]::placeholder{color: #ccc;}
+main section .tab_container #login_frm .id_pw input[name*=pw] {margin-bottom:0;}
+main section .tab_container #login_frm .login_stay {
+    margin: 40px 0;
+}
+main section .tab_container #login_frm .login_stay input[name$=stay] {display: none;} /* 안보임 */
+main section .tab_container #login_frm .login_stay label {}
+/* =================================checkbox 상태에 따라 디자인 변경 CSS */
+main section .tab_container #login_frm .login_stay input[name$=stay] + label {
+    background-image: url(../images/unchecked.png);
+    background-size:24px;
+    background-repeat: no-repeat;
+    padding: 2px 0 5px 30px;
+    font-size: 0.75rem;
+    color:#fff;
+} /* 체크선택안됨 */
+main section .tab_container #login_frm .login_stay input[name$=stay]:checked + label {
+    background-image: url(../images/checked.png);
+} /* 체크선택됨 */
+/* =================================(아래) 버튼 */
+main section .tab_container #login_frm .btn_search {
+}
+main section .tab_container #login_frm .btn_search #sign_in_btn {
+    width: 100%;
+    background-color: #48f78b;
+    padding: 15px 20px ;
+    border-radius: 25px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+main section .tab_container #login_frm .btn_search .pw_search {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 300;
+    text-align: center;
+    display: block;
+}
+/* =========================sign_up 을 클릭시 열리는 내용 */
+main section .tab_container #join_frm {}
