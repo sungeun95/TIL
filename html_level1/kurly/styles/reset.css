@@ -23,4 +23,16 @@ legend {display: none;} /* 숨긴다. */
 input {border:0; outline: none;} /* 선없애기+선택시 선없애기 */
 button {border: 0; background:none; cursor: pointer;}/* 선 없애기, 배경색 없애기, 마우스 커서 모양 바꾸기 */ 
 table,tr,td,th {border-collapse:collapse;} /* 이중선 없애기 */
-select, optgroup {border: 0; appearance: none;}
+select, optgroup {border: 0; appearance: none; outline: none;}
+/* chrome크롬, safati사파리, edge엣지, opera오페라 */
+/* 웹브라우저 엔진 -webkit-, -moz-, -m-, -o- */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance:none;
+    margin: 0;
+}
+/* firefox파이어폭스 */
+input[type=number] {
+    -moz-appearance:none;
+    margin: 0;
+}
