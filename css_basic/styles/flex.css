@@ -1,0 +1,16 @@
+.wrap1 {
+    background-color: lightslategray;
+    display:flex;
+    /* flex-direction:row; */ /* 컨테이너에 작성하는 메인축정렬 */
+    /* flex-wrap: wrap-reverse; */ /* 컨테이너의 item 줄바꿈처리 */
+    flex-flow:column wrap; /* 방향과 줄바꿈 한번에 작성하는 순서  */
+    justify-content:center;
+    height: 600px;
+}
+.wrap1 li{
+    width:100px; height:100px; font-size: 3rem;
+}
+.wrap1 li:nth-child(odd) {background-color: aqua;}
+.wrap1 li:nth-child(even) {background-color: yellow;}
+/* .wrap1 li:nth-child(3) {background-color: crimson;}
+.wrap1 li:nth-child(4) {background-color: lime;} */
