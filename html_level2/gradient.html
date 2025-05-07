@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient : CSS</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        .btn {
+            display: block;
+            /* border: 1px solid #000; */
+            width: 400px; height: 200px;
+            border-radius: 10px;
+        }
+        #btn1 {
+            /* gradient 사용시 -color 없이 통합 background로 명령한다. */
+            background: linear-gradient(45deg, #eee, rgba(255,0,0,0.5),#ff0, #f50);
+            background-size:400%;
+            transition:all 1s;
+            font-size: 3rem; font-weight: 800; color:#fff;
+        }
+        #btn1:hover {
+            background-position:100% 0;
+        }
+        h1 {
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, purple, darkblue, #555, brown);
+            background-size: 500%;
+            display: inline-block;
+            transition: all 0.5s;
+            /* width: max-content; */
+            /* gradient 색상을 글자에 적용하기 위한 방법(마스크구조) */
+            color:transparent;
+            background-clip: text;
+        }
+        h1:hover {
+            background-position-x:100%;
+        }
+        h2 {
+            text-transform: uppercase;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: radial-gradient(circle,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            color:transparent;
+            background-clip: text ;
+            background-size: 700%;
+            transition: all 1s;
+        }
+        h2:hover{
+            background-position: 100% 0;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn1" class="btn">Hover ma!</button>
+    <h1>HTML & CSS & javascript & figma & react</h1>
+    <h2>abcdefghijklm<br>nopqrstuvwxyz</h2>
+</body>
+</html>

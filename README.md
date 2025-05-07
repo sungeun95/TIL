@@ -192,3 +192,18 @@
 * container(부모속성), item(자식속성)에 주는 속성이 다르기 때문에 주의해서 작성해야한다! **기본 시작은 부모**
 * `display:flex` 부모(container)대상에 display명령어로 해당 레이아웃이 flex라는 선언부터 시작한다.
 * (위) flex 선언을 진행 시 메인축은 기본값 수평, 교차축은 기본값 수직으로 정렬된다.
+## position
+### 필수속성 relative, absolute, fixed, sticky
+### 선택속성 top, bottom, right, left
+* `flex, float`등 포함 위치가 잡혀있는 요소에서 상/하/좌/우로 살짝 이동할때는 `position:relative`
+* 형제 요소 또는 부모-자식 요소 관계에서 부모 위치를 기준으로 요소를 겹치거나 현재 위치와는 관계없이 멀리 이동할 경우는 `position:absolute`
+* **주의사항** `absolute` 사용시 부모들 중 별도의 position속성이 없다면 position속성을 함께 작성해야한다.`relative, absolute, fixed, sticky` 모두 가능!(상황에 따라 조합하기)
+## transition
+* `transition:애니메이션적용속성 지속시간 가속도 딜레이속도`
+* `transition:속성, 속성, 속성` **2개 이상 속성 작성 가능**
+* transition속성은 hover 등 동작을 따라가는게 아닌 변화하는 CSS값이 어떤 요소에 들어가느냐를 기준으로 적용된다.
+### 가속도 종류
+* `easr` : 기본값, 시작은 느리게, 중간은 빠르게, 끝은 느리게
+* `linear` : 처음부터 끝까지 일정한 속도로
+* `easr-in` : 천천히 시작해서 점점 빠르게
+* `easr-iut` : 빠르게 시작해서 점점 느리게
