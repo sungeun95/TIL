@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation | keyframes | css</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        main {background-color: #eee; padding: 50px; height: 100vh;}
+        main .target {} /* 공통 */
+        main .ball {
+            background: radial-gradient(at left top, #fff,#222);
+            background-size: 100%; 
+            /* background-position: 70% ; */
+            width: 50px; height: 50px; border-radius: 50%;
+            /* animation:right500 1s linear 0.2s 3 alternate both; */
+        }
+        main .ball2 {
+            background: radial-gradient(at right top,#ff0,#f00,#f0f);
+            width: 50px; height: 50px; border-radius: 50%;
+            /* animation: bottom300 1s ease 1s 7 alternate both; */
+        }
+        main .ball3 {/* width: 80px; animation: zigzag 1.5s 3 alternate both; */}
+        main .ball3 img {
+            /* animation: rotaoe360 0.5s alternate both; */
+        }
+        /* ========================================= */
+        section {}
+        section .ad {height: 50vh; padding: 50px; }
+        section .ad span{
+            text-transform: uppercase;
+            font-size: 3rem; font-weight: 800;
+            display: inline-block;
+            animation: ad_txt 0.5s both;
+        }
+        section .ad span:nth-child(1){animation-delay:0;}
+        section .ad span:nth-child(2){animation-delay:0.5s;}
+        section .ad span:nth-child(3){animation-delay:1s;}
+        section .ad span:nth-child(4){animation-delay:1.5s;}
+        /* ========================================= */
+        section .ad2 {height: 50vh; padding: 50px;}
+        section .ad2 em{
+            font-size: 4rem; font-weight: 600;
+            display: inline-block;
+            animation: ad2_txt 0.5s;
+        }
+        section .ad2 em:nth-child(1){animation-delay:0s;}
+        section .ad2 em:nth-child(2){animation-delay:0.2s;}
+        section .ad2 em:nth-child(3){animation-delay:0.4s;}
+        section .ad2 em:nth-child(4){animation-delay:0.6s;}
+        section .ad2 em:nth-child(5){animation-delay:0.8s;}
+        /* 에니메이션 적용 순서 1. 기프레임(장면)생성, 2. 에니메이션도출 */
+        @keyframes ad2_txt {
+            0% {transform: translateY(50px) rotate(0);}
+            25% {transform: translateX(-20px) rotate(-45deg);}
+            50% {transform: translateX(0) rotate(-90deg);}
+            75% {transform: translateY(50) rotate(360deg);}
+        }
+        @keyframes ad_txt {
+            from {transform: translateY(50px); opacity: 0;}
+            to {transform: translateY(0); opacity: 1;}
+        }
+        @keyframes rotaoe360{
+            from {transform: rotate(0);}
+            to {transform: rotate(360deg);}
+        }
+        @keyframes zigzag {
+            0% {transform: translate(0, 0) ;}
+            25% {transform: translate(500px, 0);}
+            50% {transform: translate(0, 500px);}
+            75% {transform: translate(500px, 500px);}
+        }
+        @keyframes right500 {
+            from {transform:translateX(0) rotate(0);}
+            to {transform:translateX(300px) rotate(360deg);}
+        }
+        @keyframes bottom300 {
+            from {transform: translateY(0) rotate(0);}
+            to {transform: translateY(300px) rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="target ball"></div>
+        <div class="target ball2"></div>
+        <div class="target ball3">
+            <img src="https://cdn-icons-png.flaticon.com/128/1041/1041168.png" alt="">
+        </div>
+    </main>
+    <section>
+        <div class="ad">
+            <span>h</span>
+            <span>t</span>
+            <span>m</span>
+            <span>l</span>
+        </div>
+        <div class="ad2">
+            <em>안</em>
+            <em>녕</em>
+            <em>하</em>
+            <em>세</em>
+            <em>요</em>
+        </div>
+    </section>
+</body>
+</html>
