@@ -31,37 +31,45 @@
         #menu_title span {font-weight:800;}
         #menu_title img {padding:0 10px;}
         /* 메뉴내용 */
+
+
+        
         .menu_contents {position:relative;}
-        .menu_contents .menu {
+        .menu_contents .menu { /* 커피 이미지 공통 */
             display:flex; justify-content:space-between;
-            position:absolute; left:0; top:0;
-            
+            position:absolute; left:0; top:0; /* 이미지 겹침 */
         }
         .menu_contents .menu a {/* 커피 사진=============> */
-            margin-right:10px; overflow:hidden; position:relative;
+            margin-right:10px; overflow:hidden;
+            position:relative;
             border-radius:10px;
-            
         }
+        /* ------------------------------------------------------------- */
+        .menu_contents .menu2,
+        .menu_contents .menu3 {display: none;}
+        /* ------------------------------------------------------------- */
         .menu_contents .menu a:last-child {margin-right:0}
-        .menu_contents .menu a img {width:100%;}
+        .menu_contents .menu a img {width:100%;} 
         /* 커피정보 */
         .menu_contents .menu .info {
             background:rgba(0,102,51,0.8); /*#006633 == rgb(0,102,051)*/
-            color:#fff;
-            width:100%; height:100%; display:block;
+            width:100%; height:100%; /* display:block; */
             position:absolute; left:0; top:0;
             text-align:center;
-            transition: border-radius 0.2s;/* 애니메이션============> */
+            display: none;
         }
-        .menu_contents .menu .info:hover{ /* 마우스 올리는 메뉴===========> */
-            border-radius: 50%;
-            background-color: black;
-        } 
+        /* ------------------------------------------------------------- */
+        .menu_contents .menu a:hover > * {
+            animation: star 0.3s forwards;
+            display: inline-block;}
+        /* ------------------------------------------------------------- */
         .menu_contents .menu .info span:first-child {padding-top:40%;}
         .menu_contents .menu .info span {
             display:block; font-weight: 600;
             line-height:1.5;
+            color:#fff;
         }
+        
         /* active class + animation */
         .active {font-weight:800;}
         .active::after {
@@ -69,7 +77,9 @@
             width:100%; height:2px; background:#006633;
             position:absolute; bottom:-10px; left:0;
         }
-        @keyframes hover {
+
+        /* ============== */
+        @keyframes star {
             0% {border-radius: 0;}
             100% {border-radius: 50%;}
         }
