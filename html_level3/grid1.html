@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        .container {
+            border: 5px solid #000;
+            padding:20px;
+            display:grid; /* 정렬대상 item의 부모한테 명령(flex와 동일) */
+            /* 1행 기준 item 크기 설정과 방향 속성 */
+            /* grid-template-rows:50px 100px 50px 100px; */
+            /* 1열 기준 item 크기 설정과 방향 속성  */
+            /* grid-template-columns: repeat(3,1fr); */
+            /* grid-template-rows:100px 150px;  */
+            grid-template-areas:
+                'title title'
+                'poster poster' /* 이름을 연속하면 연장개념 처리 */
+                'details reservation'
+                ;
+            grid-template-rows: 50px 300px 40px;
+            width: 350px;
+        }
+        .container .item{}
+        /* 각 영역에 grid 레이아웃을 위한 이름 선정 */
+        .container .item:nth-child(1){grid-area:title;}
+        .container .item:nth-child(2){grid-area:poster;}
+        .container .item:nth-child(3){grid-area:details;}
+        .container .item:nth-child(4){grid-area:reservation;}
+        .container .item:nth-child(odd){background-color: plum;}
+        .container .item:nth-child(even){background-color: purple;}
+        .container2 {
+            display: grid;
+            grid-template-areas:
+            'title title'
+            'ticket poster'
+            'banner poster'
+            ;
+            grid-template-rows: 50px 200px 100px;
+            grid-template-columns: 65% 35%;
+            width: 400px;
+        }
+        .container2 .item{ border: 1px solid #000;}
+        .container2 .item:nth-child(1){grid-area:title;}
+        .container2 .item:nth-child(2){grid-area:ticket;}
+        .container2 .item:nth-child(3){grid-area:poster;}
+        .container2 .item:nth-child(4){grid-area:banner;}
+        .container2 .item:nth-child(odd){background-color: yellow;}
+        .container2 .item:nth-child(even){background-color: yellowgreen;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <div class="container2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+</html>

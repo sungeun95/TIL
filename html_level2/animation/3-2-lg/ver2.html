@@ -38,10 +38,15 @@
             left:0; top:0; z-index:20;
             width:100%;
         }
-        main .txt_bg_ani {
+        main .txt_bg_ani { /* 2020년 */
             background:url(images/bg_flow.png) repeat-x left top;
             height:150px; width:100%;
             position:absolute; z-index:30;
+            animation: left 30s linear infinite ;
+        }
+        @keyframes left {
+        0% {background-position: 0 0; }
+        100% {background-position: 2000px 0;}
         }
     </style>
 </head>

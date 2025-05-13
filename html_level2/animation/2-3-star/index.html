@@ -31,23 +31,23 @@
         #menu_title span {font-weight:800;}
         #menu_title img {padding:0 10px;}
         /* 메뉴내용 */
-
-
-        
         .menu_contents {position:relative;}
         .menu_contents .menu { /* 커피 이미지 공통 */
             display:flex; justify-content:space-between;
             position:absolute; left:0; top:0; /* 이미지 겹침 */
+            display: none; /* 메뉴가 많아질 것을 대비 */ 
         }
-        .menu_contents .menu a {/* 커피 사진=============> */
+        /* ------------------------------------------------------------- */
+        .menu_contents .menu1 {display:flex;}
+        /* .menu_contents .menu2,
+        .menu_contents .menu3 {display: none;} 유지보수가 않좋을 뿐 틀린건 아님 */
+        /* ------------------------------------------------------------- */
+        .menu_contents .menu a {/* 커피 사진 */
             margin-right:10px; overflow:hidden;
             position:relative;
             border-radius:10px;
+            transition: border-radius 0.5s;
         }
-        /* ------------------------------------------------------------- */
-        .menu_contents .menu2,
-        .menu_contents .menu3 {display: none;}
-        /* ------------------------------------------------------------- */
         .menu_contents .menu a:last-child {margin-right:0}
         .menu_contents .menu a img {width:100%;} 
         /* 커피정보 */
@@ -56,13 +56,11 @@
             width:100%; height:100%; /* display:block; */
             position:absolute; left:0; top:0;
             text-align:center;
-            display: none;
+            transition: opacity 0.3s forwards;
+            opacity: 0;
         }
-        /* ------------------------------------------------------------- */
-        .menu_contents .menu a:hover > * {
-            animation: star 0.3s forwards;
-            display: inline-block;}
-        /* ------------------------------------------------------------- */
+        .menu_contents .menu a:hover .info{opacity: 1;}
+        .menu_contents .menu a:hover {border-radius: 50%; }
         .menu_contents .menu .info span:first-child {padding-top:40%;}
         .menu_contents .menu .info span {
             display:block; font-weight: 600;
@@ -76,12 +74,6 @@
             content:''; display:block;
             width:100%; height:2px; background:#006633;
             position:absolute; bottom:-10px; left:0;
-        }
-
-        /* ============== */
-        @keyframes star {
-            0% {border-radius: 0;}
-            100% {border-radius: 50%;}
         }
     </style>
     <script>
@@ -115,27 +107,9 @@
                         <span>50kcal</span>
                     </span>
                 </a>
-                <a href="#">
-                    <img src="images/menu1-2.jpg" alt="">
-                    <span class="info">
-                        <span>콜드브루커피</span>
-                        <span>80kcal</span>
-                    </span>
-                </a>
-                <a href="#">
-                    <img src="images/menu1-3.jpg" alt="">
-                    <span class="info">
-                        <span>콜드브루커피</span>
-                        <span>150kcal</span>
-                    </span>
-                </a>
-                <a href="#">
-                    <img src="images/menu1-4.jpg" alt="">
-                    <span class="info">
-                        <span>콜드브루커피</span>
-                        <span>40kcal</span>
-                    </span>
-                </a>
+                <a href="#"><img src="images/menu1-2.jpg" alt=""><span class="info"><span>콜드브루커피</span><span>80kcal</span></span>
+                </a><a href="#"><img src="images/menu1-3.jpg" alt=""><span class="info"><span>콜드브루커피</span><span>150kcal</span></span>
+                </a><a href="#"><img src="images/menu1-4.jpg" alt=""><span class="info"><span>콜드브루커피</span><span>40kcal</span></span></a>
             </div>
             <div class="menu menu2">
                 <a href="#">
