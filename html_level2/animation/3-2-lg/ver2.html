@@ -31,22 +31,22 @@
         }
         main .video_bg video {
             position:absolute;
-            left:-100px; top:40px; z-index:10;
+            left:-120px; top:45px; z-index:10;
         }
         main .video_bg img {
             position:absolute; 
-            left:0; top:0; z-index:20;
+            left:0; top:0; z-index:11;
             width:100%;
         }
         main .txt_bg_ani { /* 2020년 */
             background:url(images/bg_flow.png) repeat-x left top;
             height:150px; width:100%;
             position:absolute; z-index:30;
-            animation: left 30s linear infinite ;
+            animation: pst 15s linear infinite ;
         }
-        @keyframes left {
-        0% {background-position: 0 0; }
-        100% {background-position: 2000px 0;}
+        @keyframes pst {
+        0% {background-position-x:0; }
+        100% {background-position-x:2000px;}
         }
     </style>
 </head>
