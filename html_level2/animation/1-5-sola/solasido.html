@@ -23,18 +23,29 @@
             background-position:center;
             opacity:0; transition:opacity 0.5s;
         }
-        .slide_wrap .slide_c .slide1 {background-image:url(images/bg1.jpg); opacity:1} /* 배경 */
+        .slide_wrap .slide_c .slide1 {
+            background-image:url(images/bg1.jpg); opacity:1;
+            animation: background_s 5s forwards;
+        } /* 배경 */
         .slide_wrap .slide_c .slide2 {background-image:url(images/bg2.jpg);}
         .slide_wrap .slide_c .slide3 {background-image:url(images/bg3.jpg);}
         .slide_wrap .slide_c .slide p {
             text-align:center; color:#fff;
             font-size:3rem; letter-spacing:-1px;
             position:relative; top:400px;
+            animation: solaseado 2s forwards;
         }
         /* class */
 
         /* animation */
-        
+        @keyframes solaseado {
+            0% {transform: translateY(0); opacity: 0;}
+            100% {transform: translateY(-10px); opacity: 1}
+        }
+        @keyframes background_s {
+            0% {background-size: 110% 110%;;}
+            100% {background-size: 100% 100%;}
+        }
     </style>
     <script>
         window.onload=function(){
